@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Online Academy - Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            background-image: url('https://via.placeholder.com/1920x1080?text=Saylani+IT+Park');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #333333;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+        }
+        .radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+    display: block;
+    margin: 2px auto; /* centers the image horizontally */
+    width: 50%;
+}
+
+    </style>
+</head>
+<body>
+
+    
+
+
+    <div class="overlay">
+        <img src="logo.png" alt="Sylani logo">
+        <h1>Saylani Online Academy</h1>
+
+        <div class="container">
+            
+            <h2>Student Registration Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                
+                <label for="father_name">Father Name:</label>
+                <input type="text" id="father_name" name="father_name" required placeholder="Enter your father's name">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6" placeholder="Enter a strong password">
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required placeholder="Enter your complete address"></textarea>
+                
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        Female
+                    </label>
+                </div>
+                
+                <label>Languages Known:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="urdu" name="language[]" value="urdu">
+                        Urdu
+                    </label>
+                    <label>
+                        <input type="checkbox" id="english" name="language[]" value="english">
+                        English
+                    </label>
+                    <label>
+                        <input type="checkbox" id="punjabi" name="language[]" value="punjabi">
+                        Punjabi
+                    </label>
+                    <label>
+                        <input type="checkbox" id="chinese" name="language[]" value="chinese">
+                        Chinese
+                    </label>
+                </div>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                
+                <label for="city">City:</label>
+                <select id="city" name="city" required>
+                    <option value="" disabled selected>Select your city</option>
+                    <option value="karachi">Karachi</option>
+                    <option value="lahore">Lahore</option>
+                    <option value="islamabad">Islamabad</option>
+                </select>
+                
+                <label for="picture">Upload Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+                
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+        <img src="logo.png" alt="Sylani logo">
+
+    </div>
+
+
+ 
+
+</body>
+</html>
